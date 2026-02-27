@@ -1,88 +1,117 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root {
+  --bg-color: #1e1e1e;
+  --calc-bg: #2d2d2d;
+  --display-bg: #3d3d3d;
+  --text-color: #ffffff;
+  --btn-bg: #454545;
+  --btn-hover: #5a5a5a;
+  --accent-color: #ff9f0a; /* Orange for operators */
+  --scientific-color: #3a3a3a; /* Darker for scientific functions */
+  --danger-color: #ff453a; /* Red for Clear/Delete */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: #f2f2f2;
+  width: 100%;
 }
 
 .calculator {
-  background-color: white;
+  background-color: var(--calc-bg);
   padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-  width: 280px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  width: 350px; /* Wider for scientific buttons */
+  max-width: 90%;
+}
+
+.display-container {
+    background-color: var(--display-bg);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 80px;
+}
+
+.previous-operand {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    min-height: 1.2em;
 }
 
 .display {
+  background: transparent;
+  border: none;
+  color: var(--text-color);
+  font-size: 2rem;
   width: 100%;
-  padding: 12px;
-  font-size: 24px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
   text-align: right;
+  outline: none;
 }
 
-.buttons {
+.buttons-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr); /* 5 columns for scientific layout */
   gap: 10px;
 }
 
-button {
+.btn {
   padding: 15px;
-  font-size: 18px;
-  background-color: #eee;
+  font-size: 1.1rem;
   border: none;
-  border-radius: 6px;
+  border-radius: 10px;
+  background-color: var(--btn-bg);
+  color: var(--text-color);
   cursor: pointer;
-  transition: background 0.2s;
+  transition: all 0.2s ease;
+  user-select: none;
 }
 
-button:hover {
-  background-color: #ddd;
+.btn:hover {
+  background-color: var(--btn-hover);
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-operator {
+  background-color: var(--accent-color);
+  color: white;
+  font-weight: bold;
+}
+
+.btn-operator:hover {
+    background-color: #ffb340;
+}
+
+.btn-scientific {
+    background-color: var(--scientific-color);
+    font-size: 0.9rem;
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.btn-danger:hover {
+    background-color: #ff6056;
 }
