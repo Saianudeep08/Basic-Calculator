@@ -1,12 +1,51 @@
-# React + Vite
+# Basic Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple calculator application built with React and Vite. The project demonstrates component-based UI development, client-side state handling, and responsive styling.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Basic arithmetic operations
+- Interactive calculator interface
+- Responsive layout
+- Client-side state management
+- Fast development workflow with Vite
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- JavaScript
+- Vite
+- CSS
+
+## Run Locally
+
+```bash
+git clone <repository-url>
+cd Basic-Calculator
+npm install
+npm run dev
+```
+
+Open the local URL shown by Vite, normally `http://localhost:5173`.
+
+## Production Build
+
+```bash
+npm run build
+npm run preview
+```
+
+## Project Scope
+
+This is a compact frontend project intended to demonstrate core React concepts and clean UI implementation.
+
+## Future Improvements
+
+- Calculation history
+- Keyboard input support
+- Additional scientific operations
+- Automated component tests
+
+## License
+
+No license is currently specified for this repository.
